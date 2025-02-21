@@ -31,7 +31,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="image-container">
-            <img src="/doge.jpg" alt="Doge" className="floating-image" />
+            <img src="/picture.jpeg" alt="Doge" className="floating-image" />
           </div>
         </motion.div>
       </div>
