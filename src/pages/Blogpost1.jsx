@@ -6,7 +6,6 @@ import {
   FaMapMarkerAlt,
   FaUser,
   FaTag,
-  FaShareAlt,
 } from "react-icons/fa";
 import img1 from "../assets/day1/1.jpg";
 import img2 from "../assets/day1/2.jpg";
@@ -18,66 +17,55 @@ const BlogPost1 = ({ day = 1 }) => {
   
   const [isVisible, setIsVisible] = useState(false);
 
-  // Sample blog post data - would typically come from an API or props
   const post = {
     day: day,
-    title: "Footsteps Through History: Discovering Manila’s Iconic Landmarks",
+    title: "A Step Back in Time - Exploring Intramuros",
     author: "Jondino Rodrigo",
     location: "Intramuros",
-    date: "April 14, 2025",
-    tags: ["Technology", "Innovation", "Silicon Valley", "Education"],
+    date: "April 7, 2025",
+    tags: ["EducationalTour", "DayOne", "PhilippineHistory"],
     images: [
       {
         src: img5,
-        alt: "Silicon Valley Campus",
+        alt: "",
         orientation: "landscape",
-        caption:
-          "The impressive campus of a leading tech company in Silicon Valley.",
       },
       {
         src: img1,
-        alt: "Innovation Workshop",
+        alt: "",
         orientation: "portrait",
-        caption:
-          "Students engaging in an innovation workshop led by industry experts.",
       },
       {
         src: img2,
-        alt: "AI Demonstration",
+        alt: "",
         orientation: "portrait",
-        caption:
-          "Live demonstration of cutting-edge AI technology applications.",
       },
       {
         src: img3,
-        alt: "Group Discussion",
+        alt: "",
         orientation: "landscape",
-        caption:
-          "Group discussion about the future of technology and its impact on society.",
       },
       {
         src: img4,
-        alt: "Sustainable Tech Lab",
+        alt: "",
         orientation: "portrait",
-        caption: "Inside the sustainable technology research laboratory.",
       },
     ],
     content: [
-      "Our educational tour began with visits to leading tech companies in Silicon Valley, exploring innovation labs and learning about cutting-edge technologies that are shaping our future. The day started with an early morning briefing at our hotel before boarding buses to our first destination. The anticipation among students was palpable as we approached the sleek, modern campus of one of the world's most influential technology companies.",
+      "On Day 1, we began our educational tour by meeting up at the airport, where I joined my classmates for the exciting journey ahead. The atmosphere was filled with anticipation and energy as we greeted each other and prepared for the days to come.",
 
-      "Upon arrival, we were greeted by our hosts who provided an overview of the company's history, mission, and vision for the future. What struck me immediately was how the physical space reflected the company's values - open collaborative spaces, sustainable architecture, and technology seamlessly integrated into every aspect of the environment. Students were particularly impressed by the innovation lab, where prototypes of future products were being developed and tested.",
+      "Once everyone had arrived, we headed straight to the DJM Dorm to settle in. After checking into our rooms and unpacking, we took a much-needed break for lunch and some rest. It was a great way to refresh ourselves before diving into the day's main activities.",
 
-      "The afternoon session included a panel discussion with engineering leaders who shared insights about their career journeys and the skills most valued in today's rapidly evolving tech landscape. Several students asked thoughtful questions about ethical considerations in technology development and how the company approaches issues of privacy and security. The panelists engaged candidly, acknowledging challenges while also highlighting their frameworks for responsible innovation.",
+      "In the afternoon, we officially kicked off our tour with our first destination: Intramuros. This historic site served as a powerful introduction to the rich cultural heritage of the Philippines and set the tone for the rest of our trip.",
 
-      "One of the most valuable aspects of the day was the hands-on workshop where students were divided into small teams and tasked with ideating solutions to real-world problems using emerging technologies. It was fascinating to observe how quickly they applied concepts they had learned earlier in the day, collaborating effectively despite having met only recently. The creativity and technical sophistication displayed in their proposals impressed even the seasoned industry mentors guiding the activity.",
+      "Our tour guide gave us a detailed explanation of Intramuros' history, emphasizing how it was the heart of Spanish Manila and played a crucial role in shaping our country’s past. Hearing these stories while walking through cobblestone streets and seeing centuries-old architecture truly made the experience come alive.",
 
-      "As the day concluded, we gathered for a reflection session where students shared their key takeaways and how the experience had influenced their thinking about future career paths. Many expressed that seeing technology development up close had demystified the process and made their aspirations feel more achievable. Others noted how the visit had broadened their understanding of the diverse roles available within tech companies beyond just programming and engineering.",
+      "As I explored the area, I couldn’t help but feel like I was stepping back in time. The preserved buildings and historical ambiance offered a glimpse into the past, sparking curiosity and appreciation for our nation’s history.",
 
-      "The day's experiences underscored the value of experiential learning and the importance of bridging academic knowledge with real-world applications. As we returned to our hotel, conversations continued to buzz with excitement about tomorrow's agenda and the new perspectives gained from today's immersion in Silicon Valley's innovation ecosystem.",
+      "After all the learning and walking, we wrapped up the day at SM Mall of Asia (MOA). It was the perfect place to relax, grab a bite to eat, and enjoy some free time with friends. The combination of historical insight and modern leisure made for a memorable first day of our tour.",
     ],
   };
 
-  // Detect when component is in viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -131,7 +119,6 @@ const BlogPost1 = ({ day = 1 }) => {
             alt={post.images[0].alt}
             className="hero-image"
           />
-          <p className="image-caption">{post.images[0].caption}</p>
         </div>
 
         <article className="blogpost-article">
@@ -139,7 +126,6 @@ const BlogPost1 = ({ day = 1 }) => {
 
           <div className={`article-image ${post.images[1].orientation}`}>
             <img src={post.images[1].src} alt={post.images[1].alt} />
-            <p className="image-caption">{post.images[1].caption}</p>
           </div>
 
           <p className="article-paragraph">{post.content[1]}</p>
@@ -147,7 +133,6 @@ const BlogPost1 = ({ day = 1 }) => {
           <div className="dual-image-container">
             <div className={`article-image ${post.images[2].orientation}`}>
               <img src={post.images[2].src} alt={post.images[2].alt} />
-              <p className="image-caption">{post.images[2].caption}</p>
             </div>
 
             <p className="article-paragraph dual-content">{post.content[2]}</p>
@@ -157,7 +142,6 @@ const BlogPost1 = ({ day = 1 }) => {
 
           <div className={`article-image ${post.images[3].orientation}`}>
             <img src={post.images[3].src} alt={post.images[3].alt} />
-            <p className="image-caption">{post.images[3].caption}</p>
           </div>
 
           <div className="split-content">
@@ -165,7 +149,6 @@ const BlogPost1 = ({ day = 1 }) => {
 
             <div className={`article-image ${post.images[4].orientation}`}>
               <img src={post.images[4].src} alt={post.images[4].alt} />
-              <p className="image-caption">{post.images[4].caption}</p>
             </div>
           </div>
 
@@ -184,11 +167,7 @@ const BlogPost1 = ({ day = 1 }) => {
             </div>
           </div>
 
-          <div className="share-container">
-            <button className="share-button">
-              <FaShareAlt className="share-icon" /> Share this post
-            </button>
-          </div>
+          
         </div>
       </motion.div>
     </div>

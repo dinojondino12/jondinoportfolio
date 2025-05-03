@@ -10,84 +10,83 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import img1 from "../assets/day1/5.jpg";
+import img2 from "../assets/day2/5.jpg";
+import img3 from "../assets/day3/3.jpg";
+import img4 from "../assets/day4/4.jpg";
+import img5 from "../assets/day5/1.jpg";
+import img6 from "../assets/day6/7.jpg";
+import img7 from "../assets/day7/2.jpg"
 
 const blogsData = [
   {
     day: 1,
-    title: "Footsteps Through History: Discovering Manila’s Iconic Landmarks",
-    location: "San Francisco, CA",
-    date: "March 15, 2025",
-    readTime: "6 min read",
+    title: "A Step Back in Time - Exploring Intramuros",
+    location: "Intramuros",
+    date: "April 7, 2025",
     image: img1,
     featured: true,
-    tags: ["Technology", "Innovation", "Silicon Valley"],
+    tags: ["EducationalTour", "HistoricalTrip", "DayOne", "PhilippineHistory"],
     link: "/blogpost1",
   },
   {
     day: 2,
-    title: "Workshops at Stanford University",
-    location: "Palo Alto, CA",
-    date: "March 16, 2025",
-    readTime: "8 min read",
-    image: "/images/blog-day2.jpg",
+    title: "Discovering Discipline and Innovation in Subic",
+    location: "Subic Bay",
+    date: "April 8, 2025",
+    image: img2,
     featured: true,
-    tags: ["Education", "Workshops", "Stanford"],
-    link: "/",
+    tags: ["EducationalTour", "SubicExperience", "DayTwo"],
+    link: "/blogpost2",
   },
   {
     day: 3,
-    title: "Sustainable Tech Solutions",
-    location: "Berkeley, CA",
-    date: "March 17, 2025",
-    readTime: "5 min read",
-    image: "/images/blog-day3.jpg", 
+    title: "Unveiling History and Heritage",
+    location: "National Museum of Natural History",
+    date: "April 9, 2025",
+    image: img3, 
     featured: false,
-    tags: ["Sustainability", "Climate Tech", "Green Solutions"],
-    link: "/",
+    tags: ["DayThree", "PhilippineNationalMuseum", "CulturalHeritage", "ManuelQuezonPark"],
+    link: "/blogpost3",
   },
   {
     day: 4,
-    title: "Startup Ecosystem Deep Dive",
-    location: "San Francisco, CA",
-    date: "March 18, 2025",
-    readTime: "7 min read",
-    image: "/images/blog-day4.jpg",
+    title: "From Money to Machines - A Glimpse of Progress",
+    location: "Bangko Sentral, Hytec Power, Inc.",
+    date: "April 10, 2025",
+    image: img4,
     featured: true,
-    tags: ["Startups", "Entrepreneurship", "Venture Capital"],
-    link: "/",
+    tags: ["DayFour", "BangkoSentralNgPilipinas", "GoldBarsExperience","HyterPowerInc"],
+    link: "/blogpost4",
   },
   {
     day: 5,
-    title: "AI and Machine Learning Breakthroughs",
-    location: "Mountain View, CA",
-    date: "March 19, 2025",
-    readTime: "9 min read",
-    image: "/images/blog-day5.jpg",
+    title: "Exploring Safety and Transportation Systems",
+    location: "Metro Manila",
+    date: "April 11, 2025",
+    image: img5,
     featured: false,
-    tags: ["AI", "Machine Learning", "Technology"],
-    link: "/",
+    tags: ["DayFive", "MMDAExperience", "TrafficManagement", "LRTTour"],
+    link: "/blogpost5",
   },
   {
     day: 6,
-    title: "Design Thinking Workshop",
-    location: "Cupertino, CA",
-    date: "March 20, 2025",
-    readTime: "6 min read",
-    image: "/images/blog-day6.jpg",
-    featured: false,
-    tags: ["Design", "User Experience", "Innovation"],
-    link: "/",
+    title: "Baguio Highlights - From Strawberries to the Night Market",
+    location: "Baguio City",
+    date: "April 12, 2025",
+    image: img6,
+    featured: true,
+    tags: ["DaySix", "BaguioAdventure", "StrawberryFarm", "BellChurch"],
+    link: "/blogpost6",
   },
   {
     day: 7,
-    title: "Future of Work and Technology",
-    location: "San Jose, CA",
-    date: "March 21, 2025",
-    readTime: "8 min read",
-    image: "/images/blog-day7.jpg",
-    featured: true,
-    tags: ["Future of Work", "Remote Work", "Digital Transformation"],
-    link: "/",
+    title: "Rest and Reflection - Wrapping Up the Journey",
+    location: "Baguio City",
+    date: "April 13, 2025",
+    image: img7,
+    featured: false,
+    tags: ["DaySeven", "RestAndReflection", "BackToQuezonCity"],
+    link: "/blogpost7",
   },
 ];
 
@@ -207,10 +206,6 @@ const Blogs = () => {
                   <div className="meta-item">
                     <FaMapMarkerAlt className="meta-icon" />
                     <span>{blog.location}</span>
-                  </div>
-                  <div className="meta-item">
-                    <FaClock className="meta-icon" />
-                    <span>{blog.readTime}</span>
                   </div>
                 </div>
 
