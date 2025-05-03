@@ -1,42 +1,75 @@
-import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="hero-content">
-        <motion.div 
+        <motion.div
           className="hero-text"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1>Jondino Rodrigo</h1>
-          <h2>Full Stack Developer</h2>
-          <p className="hero-description">
-          "Turning complex problems into elegant web solutions."
-          </p>
-          <motion.button 
-            className="cta-button"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Let's Connect
-          </motion.button>
+            Jondino Rodrigo
+          </motion.h2>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
+            Full Stack Developer
+          </motion.h1>
+          <motion.p
+            className="hero-description"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
+            "Turning complex problems into elegant web solutions."
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <Link to="/contact" className="cta-button">
+              Let's Connect
+            </Link>
+          </motion.div>
         </motion.div>
-        
-        <motion.div 
+        <motion.div
           className="hero-image"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="image-container">
-            <img src="/picture.jpeg" alt="Doge" className="floating-image" />
-          </div>
+          <motion.div
+            className="image-container"
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 3,
+              ease: "easeInOut",
+            }}
+          >
+            <img
+              src="/picture.jpeg"
+              alt="Jondino Rodrigo"
+              className="floating-image"
+            />
+          </motion.div>
         </motion.div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;
