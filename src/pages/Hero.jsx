@@ -1,42 +1,35 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="hero-content">
-        <motion.div 
-          className="hero-text"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1>Jondino Rodrigo</h1>
-          <h2>Full Stack Developer</h2>
+        <div className="hero-text">
+          <h2>Jondino Rodrigo</h2>
+          <h1>Full Stack Developer</h1>
           <p className="hero-description">
-          "Turning complex problems into elegant web solutions."
+            "Turning complex problems into elegant web solutions."
           </p>
-          <motion.button 
-            className="cta-button"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Let's Connect
-          </motion.button>
-        </motion.div>
-        
-        <motion.div 
-          className="hero-image"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
+          <button className="cta-button">
+            <MotionLink to="/contact">Let's Connect</MotionLink>
+          </button>
+        </div>
+        <div className="hero-image">
           <div className="image-container">
-            <img src="/picture.jpeg" alt="Doge" className="floating-image" />
+            {/* Replace with your actual image */}
+            <img
+              src="/picture.jpeg"
+              alt="Jondino Rodrigo"
+              className="floating-image"
+            />
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;
