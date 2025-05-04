@@ -5,28 +5,22 @@ import "../style/exp.css";
 
 const experienceData = [
   {
-    title: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
-    period: "2022 - Present",
-    location: "San Francisco, CA",
-    description: "Led development of multiple React-based web applications with a focus on performance optimization and accessibility. Implemented CI/CD pipelines and mentored junior developers.",
-    technologies: ["React", "TypeScript", "GraphQL", "Jest"]
+    title: "Software Tester",
+    company: "One Zamboanga Evacuation Center Management System",
+    period: "Capstone Project | 2024",
+    description: "As the tester for our One Zamboanga Evacuation Center Management System capstone project, I was responsible for ensuring the system's accuracy, stability, and overall functionality. The project aimed to streamline the management and monitoring of evacuation centers in Zamboanga during disasters. My role involved writing and executing test cases, performing manual testing, and identifying bugs or inconsistencies in system behavior. I closely collaborated with the development team to report issues, validate fixes, and ensure that the features met both technical specifications and user requirements. This experience helped me sharpen my skills in quality assurance, strengthened my attention to detail, and gave me valuable insights into real-world testing processes for impactful software solutions.",
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Agency",
-    period: "2019 - 2022",
-    location: "Boston, MA",
-    description: "Developed and maintained several client projects using modern JavaScript frameworks. Collaborated with UX designers to implement responsive interfaces and RESTful API integrations.",
-    technologies: ["Node.js", "React", "MongoDB", "Docker"]
+    title: "Software Tester",
+    company: "Western Mindanao State University-Library Attendance System with Real-Time Text Detection",
+    period: "Software Engineering Project | 2023-2024",
+    description: "As a tester for our Library Attendance System with Real-Time Text Detection project, I was responsible for ensuring the functionality, accuracy, and usability of the system. This software aimed to streamline student check-ins by using real-time OCR to detect and log attendance.My role involved creating and executing test cases, identifying and documenting bugs, and verifying system performance under different scenarios. I closely monitored the accuracy of the text detection feature, especially how it recognized student IDs and names, and helped the team optimize detection reliability. This experience deepened my understanding of quality assurance, software testing methods, and the importance of a user-friendly interface in real-world applications. I also strengthened my communication skills by working closely with developers to troubleshoot and resolve issues efficiently.",
   },
   {
-    title: "Web Developer",
-    company: "Creative Studio",
-    period: "2017 - 2019",
-    location: "Austin, TX",
-    description: "Built interactive websites for clients across various industries. Focused on responsive design, cross-browser compatibility, and performance optimization.",
-    technologies: ["JavaScript", "CSS/SCSS", "PHP", "WordPress"]
+    title: "Front-End Developer",
+    company: "Shoesinthehood E-Commerce Website",
+    period: "E-Commerce Projects | 2023-2024",
+    description: "As the front-end developer for Shoesinthehood, a modern e-commerce website focused on selling footwear, I was responsible for designing and developing an engaging, user-friendly shopping experience.Using HTML, CSS and pytho. I built responsive web pages that allowed users to browse products, filter selections, manage their carts, and complete purchases smoothly. I ensured the interface was mobile-optimized and visually aligned with the brand’s urban, stylish identity.I collaborated with the back-end team to connect real-time product data through APIs and helped implement features like inventory tracking and secure checkout. This project enhanced my skills in UI/UX design, responsive development, and the end-to-end e-commerce flow.",
   }
 ];
 
@@ -80,19 +74,8 @@ const Experience = () => {
                   <FaCalendarAlt className="meta-icon" />
                   {job.period}
                 </span>
-                <span className="meta-item">
-                  <FaMapMarkerAlt className="meta-icon" />
-                  {job.location}
-                </span>
               </div>
               <p className="experience-description">{job.description}</p>
-              <div className="tech-tags">
-                {job.technologies.map((tech) => (
-                  <span key={tech} className="tech-tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
             </motion.div>
           ))}
         </div>

@@ -1,56 +1,48 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
-import "../style/projects.css"
+import "../style/projects.css";
+import poke from "../assets/pokemon.png";
+import oz from "../assets/oz.png";
+import se from "../assets/se.jpg";
 
 const projectsData = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured online shopping platform with cart functionality, user authentication, and payment processing integration.",
-    image: "/images/project-ecommerce.jpg", // Replace with your image path
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/yourusername/ecommerce-platform",
-    liveUrl: "https://ecommerce-platform-demo.com",
+    title: "Pokemon Pokedex with Battle Simulation",
+    image: poke,
+    technologies: ["ReactJS"],
+    liveUrl: "https://pokkomon.netlify.app/",
     featured: true,
   },
   {
-    title: "Task Management App",
-    description:
-      "A drag-and-drop task management application with real-time updates, user collaboration, and automated reminders.",
-    image: "/images/project-taskapp.jpg", // Replace with your image path
-    technologies: ["React", "Firebase", "Material UI", "Socket.io"],
-    githubUrl: "https://github.com/yourusername/task-management",
-    liveUrl: "https://task-app-demo.com",
+    title: "One Zamboanga: An Evacuation Management System for Zamboanga City",
+    image: oz,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    githubUrl: "https://github.com/larenzzx/oneZamboanga_capstone.git",
     featured: true,
   },
   {
-    title: "Weather Dashboard",
-    description:
-      "A responsive weather application that provides real-time weather data and forecasts based on user location or search.",
-    image: "/images/project-weather.jpg", // Replace with your image path
+    title: "WMSU Library OCR-Library Attendance System",
+    image: se, 
     technologies: [
+      "HTML",
+      "CSS",
       "JavaScript",
-      "OpenWeather API",
-      "Chart.js",
-      "Geolocation API",
+      "PHP",
+      "MySQL"
     ],
-    githubUrl: "https://github.com/yourusername/weather-dashboard",
-    liveUrl: "https://weather-dashboard-demo.com",
+    githubUrl: "https://github.com/czeenotfound/ocr-las.git",
+    liveUrl: "#",
   },
   {
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio website showcasing my projects and skills with modern UI/UX design principles.",
-    image: "/images/project-portfolio.jpg", // Replace with your image path
-    technologies: ["React", "Framer Motion", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/portfolio-website",
-    liveUrl: "https://yourportfolio.com",
+    title: "Shoesinthehood E-Commerce Website",
+    image: "/images/project-portfolio.jpg", 
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+    githubUrl: "",
+    liveUrl: "",
   },
   {
     title: "Recipe Finder App",
-    description:
-      "An application that helps users find recipes based on ingredients they have, dietary restrictions, and cuisine preferences.",
     image: "/images/project-recipe.jpg", // Replace with your image path
     technologies: ["React Native", "Redux", "Spoonacular API"],
     githubUrl: "https://github.com/yourusername/recipe-finder",
@@ -58,8 +50,6 @@ const projectsData = [
   },
   {
     title: "News Aggregator",
-    description:
-      "A news aggregation platform that collects and categorizes news from various sources with personalized recommendations.",
     image: "/images/project-news.jpg", // Replace with your image path
     technologies: ["Vue.js", "Node.js", "Express", "News API"],
     githubUrl: "https://github.com/yourusername/news-aggregator",
@@ -162,7 +152,6 @@ const Projects = () => {
 
               <div className="project-info">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
 
                 <div className="project-tech">
                   <div className="tech-icon">

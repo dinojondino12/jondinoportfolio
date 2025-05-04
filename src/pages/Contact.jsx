@@ -83,7 +83,7 @@ const Contact = () => {
             <div className="contact-details">
               <h3>Email</h3>
               <p>
-                <a href="mailto:jondino@example.com">jonrodrigodino123@gmail.com</a>
+                <a href="mailto:jondino@example.com">jonrodrigodino153@gmail.com</a>
               </p>
             </div>
           </motion.div>
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
             <div className="contact-details">
               <h3>Location</h3>
-              <p>Tetuan, Zamboanga City</p>
+              <p>#45 M. Natividad Street Tetuan Zamboanga City </p>
             </div>
           </motion.div>
 
@@ -105,7 +105,7 @@ const Contact = () => {
             <div className="contact-details">
               <h3>Phone</h3>
               <p>
-                <a href="tel:+11234567890">09345617235</a>
+                <a href="tel:+11234567890">+639383121228</a>
               </p>
             </div>
           </motion.div>
