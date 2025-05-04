@@ -5,6 +5,7 @@ import "../style/projects.css";
 import poke from "../assets/pokemon.png";
 import oz from "../assets/oz.png";
 import se from "../assets/se.jpg";
+import ecom from "../assets/ecom.jpg";
 
 const projectsData = [
   {
@@ -23,37 +24,17 @@ const projectsData = [
   },
   {
     title: "WMSU Library OCR-Library Attendance System",
-    image: se, 
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "PHP",
-      "MySQL"
-    ],
+    image: se,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     githubUrl: "https://github.com/czeenotfound/ocr-las.git",
     liveUrl: "#",
   },
   {
     title: "Shoesinthehood E-Commerce Website",
-    image: "/images/project-portfolio.jpg", 
+    image: ecom,
     technologies: ["HTML", "CSS", "JavaScript", "PHP"],
     githubUrl: "",
     liveUrl: "",
-  },
-  {
-    title: "Recipe Finder App",
-    image: "/images/project-recipe.jpg", // Replace with your image path
-    technologies: ["React Native", "Redux", "Spoonacular API"],
-    githubUrl: "https://github.com/yourusername/recipe-finder",
-    liveUrl: "https://recipe-finder-demo.com",
-  },
-  {
-    title: "News Aggregator",
-    image: "/images/project-news.jpg", // Replace with your image path
-    technologies: ["Vue.js", "Node.js", "Express", "News API"],
-    githubUrl: "https://github.com/yourusername/news-aggregator",
-    liveUrl: "https://news-aggregator-demo.com",
   },
 ];
 
@@ -113,6 +94,7 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
+          {console.log("Rendered Projects:", filteredProjects)}
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.title}
