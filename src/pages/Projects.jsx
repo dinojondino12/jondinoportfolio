@@ -32,14 +32,14 @@ const projectsData = [
       "MySQL"
     ],
     githubUrl: "https://github.com/czeenotfound/ocr-las.git",
-    liveUrl: "https://weather-dashboard-demo.com",
+    liveUrl: "#",
   },
   {
-    title: "Portfolio Website",
-    image: "/images/project-portfolio.jpg", // Replace with your image path
-    technologies: ["React", "Framer Motion", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/portfolio-website",
-    liveUrl: "https://yourportfolio.com",
+    title: "Shoesinthehood E-Commerce Website",
+    image: "/images/project-portfolio.jpg", 
+    technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+    githubUrl: "",
+    liveUrl: "",
   },
   {
     title: "Recipe Finder App",
